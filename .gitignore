@@ -1,0 +1,73 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+.env/
+.venv/
+env/
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# dotenv environment variables
+.env
+*.env
+
+# PyInstaller
+*.spec
+
+# Test results
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff
+instance/
+*.db
+*.sqlite3
+
+# FastAPI/OpenAPI
+openapi.json
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Pytype
+.pytype/
+
+# Coverage reports
+coverage.xml
+*.cover
+*.py,cover
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Mac/Linux/Windows system files
+.DS_Store
+Thumbs.db
