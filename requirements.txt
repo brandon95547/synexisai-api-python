@@ -1,5 +1,6 @@
 fastapi
-uvicorn
+uvicorn[standard]
 aiosmtplib
 python-dotenv
 email-validator
+asyncpg
