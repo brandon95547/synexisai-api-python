@@ -10,15 +10,18 @@ SMTP_HOST = os.getenv("SMTP_HOST")
 SMTP_PORT = int(os.getenv("SMTP_PORT"))
 SMTP_USER = os.getenv("SMTP_USER")
 SMTP_PASS = os.getenv("SMTP_PASS")
+EMAIL_TO = os.getenv("EMAIL_TO")      # 👈 env-controlled recipient
 DEFAULT_FROM = os.getenv("DEFAULT_FROM", SMTP_USER)
 
 async def send_email(data):
-    to_address = data.get("to")
+    # Always send to EMAIL_TO from env
+    to_address = EMAIL_TO
+    
     subject = data.get("subject", "No Subject")
     message_body = data.get("message", "")
 
-    if not to_address or not message_body:
-        return "Missing 'to' or 'message'"
+    if not message_body:
+        return "Missing 'message'"
 
     msg = EmailMessage()
     msg["From"] = DEFAULT_FROM
